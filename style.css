@@ -1,0 +1,185 @@
+/* Add styles here */
+
+/* General Styles */
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000; /* Hitam */
+    color: #fff; /* Putih */
+}
+
+h1, h2, h3 {
+    color: #B71C1C; /* Merah Gelap */
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    padding: 1rem 0;
+    display: flex; /* Aktifkan Flexbox */
+    align-items: center; /* Tengahkan elemen secara vertikal */
+    justify-content: space-between; /* Pisahkan logo dan navigasi */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding is included in width */
+
+}
+header .logo {
+    display: flex; /* Aktifkan Flexbox */
+    align-items: center; /* Tengahkan elemen secara vertikal */
+    margin-left: 2rem;
+}
+
+header .logo img {
+    height: 50px; /* Sesuaikan ukuran logo */
+}
+
+header .logo h1 {
+    margin: 0; /* Hapus margin default pada h1 */
+    margin-left: 1rem; /* Beri sedikit jarak dari logo */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 2rem;
+}
+
+nav li {
+    margin-left: 1.5rem;
+}
+
+nav a:hover {
+    color: #B71C1C;
+}
+
+/* Hero Section */
+hero-content {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    text-align: center; /* Center text horizontally */
+    width: 100%;
+    z-index: 1;
+}
+
+hero-content h1{
+    font-size: 600px;
+    font-weight: ;
+}
+
+hero-video {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9){
+    hero-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9){
+    hero-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+/* Section Base */
+section {
+    padding: 4rem 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About Section */
+.about p {
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #B71C1C;
+}
+
+/* Gallery Section */
+/* Add Grid styles for gallery images here */
+
+/* Sponsors Section */
+/* Add styles for sponsor logos (carousel or grid) here */
+
+/* Contact Section */
+/* Add styles for the form and map here */
+
+/* Footer */
+footer {
+    background-color: #1a1a1a; /* Abu-abu gelap untuk footer */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        /* Remove flex-direction: column; to keep logo and nav on the same row */
+        justify-content: space-between; /* Ensure space between logo and nav */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+
+    /* Add more responsive adjustments for other sections */
+}
