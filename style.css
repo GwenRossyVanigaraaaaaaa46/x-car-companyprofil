@@ -1,6 +1,16 @@
 /* Add styles here */
 
 /* General Styles */
+* {
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
 body {
     margin: 0;
     box-sizing: border-box;
@@ -17,6 +27,29 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+  }
+
 
 /* Header */
 header {
@@ -62,8 +95,26 @@ nav a:hover {
     color: #B71C1C;
 }
 
+@media (max-width: 768px) {
+    /* Navigasi: ubah jadi hamburger atau stack vertikal */
+    .nav .nav-links {
+      display: none; /* ganti dengan JS untuk toggle menu */
+    }
+    .nav .menu-toggle {
+      display: block;
+      cursor: pointer;
+    }
+}
+
 /* Hero Section */
-hero-content {
+.hero {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 60vh; /* atau ketinggian khusus, misal 80vh */
+  }
+
+.hero-content {
     position: absolute;
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
@@ -73,31 +124,72 @@ hero-content {
     z-index: 1;
 }
 
-hero-content h1{
-    font-size: 600px;
-    font-weight: ;
-}
+.hero-content h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    line-height: 1.2; /* Contoh ukuran yang wajar, bukan 600px */
+  }
 
-hero-video {
-    right: 0;
-    bottom: 0;
+  .hero-content p {
+    /* Sesuaikan ukuran paragraf sedikit lebih besar */
+    font-size: 1rem;/* sekitar 18px pada font default 16px */
+    line-height: 1.5;     /* biar agak longgar */
+    margin-bottom: 1rem;
+  }
+  
+  /* Styling CTA Button */
+  .hero-content .cta-button {
+    display: inline-block;      /* agar padding & margin bekerja */
+    padding: 0.5rem 1rem;    /* ruang di dalam tombol */
+    font-size: 0.9rem;           /* ukuran teks tombol */
+    font-weight: 600;
+    text-decoration: none;      /* kalau menggunakan <a> */
+    color: #fff;                /* contoh teks putih */
+    background-color: #f70606;  /* contoh biru */
+    border-radius: 0.375rem;    /* rounded corners */
+    border: none;               /* hilangkan border default */
+    cursor: pointer;
+    position: relative;
+    z-index: 1;                 /* di atas video */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover state (opsional) */
+  .hero-content .cta-button:hover {
+    background-color: #B71C1C;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  }
+
+/* Video full-cover */
+#hero-video {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: center;
     z-index: -1;
-}
+    filter: brightness(0.9);
+  }
 
-@media (min-aspect-ratio:16/9){
-    hero-video{
-        width: 100%;
-        height: auto;
-    }
-}
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
 
-@media (max-aspect-ratio:16/9){
-    hero-video{
-        width: auto;
-        height: 100%;
-    }
-}
 
 /* Section Base */
 section {
@@ -110,9 +202,31 @@ section {
 }
 
 /* About Section */
+.about-section .container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem; /* beri jarak bawah agar paragraf tidak menempel */
+  }
+
+  .about-section .container {
+    text-align: center;
+  }
+
 .about p {
     line-height: 1.6;
 }
+@media (max-width: 480px) {
+    /* Jika masih terlalu rapat: */
+    .container {
+      width: 95%;
+    }
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+    .about-section h2 {
+      font-size: 1.5rem;
+    }
+  }
+
 
 /* Team Section */
 .team-members {
@@ -137,7 +251,15 @@ section {
 
 /* Gallery Section */
 /* Add Grid styles for gallery images here */
-
+.gallery, .sponsors {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .gallery img, .sponsors img {
+    width: 100%;
+    height: auto;
+  }
 /* Sponsors Section */
 /* Add styles for sponsor logos (carousel or grid) here */
 

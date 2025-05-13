@@ -1,5 +1,6 @@
-function main() {
-  console.log("Hello, World!");
-}
+const btn = document.querySelector('.menu-toggle');
+const links = document.querySelector('.nav-links');
 
-main();
+btn.addEventListener('click', () => {
+  links.classList.toggle('active');
+});
