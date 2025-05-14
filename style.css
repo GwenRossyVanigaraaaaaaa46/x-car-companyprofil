@@ -407,6 +407,18 @@ footer {
     padding: 2rem 0;
 }
 
+/* Footer Social Links */
+footer .social-links i {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+footer .social-links i:hover {
+    color: #B71C1C; /* Slightly lighter red on hover */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     header {
