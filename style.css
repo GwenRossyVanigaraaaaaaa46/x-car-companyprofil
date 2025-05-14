@@ -401,12 +401,13 @@ section {
 }
 /* Footer */
 footer {
-    background-color: #1a1a1a; /* Abu-abu gelap untuk footer */
-    color: #fff;
-    text-align: center;
-    padding: 2rem 0;
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
 }
 
+<<<<<<< Updated upstream
 /* Footer Social Links */
 footer .social-links i {
     margin: 0 0.5rem;
@@ -419,6 +420,63 @@ footer .social-links i:hover {
     color: #B71C1C; /* Slightly lighter red on hover */
 }
 
+=======
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+footer p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Social Links Styling */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.social-links i {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+}
+
+/* Social media branding colors */
+.fa-facebook:hover {
+  color: #4267B2;
+}
+
+.fa-instagram:hover {
+  color: #E1306C;
+}
+
+.fa-twitter:hover {
+  color: #1DA1F2;
+}
+
+.fa-linkedin:hover {
+  color: #0077B5;
+}
+
+
+>>>>>>> Stashed changes
 /* Responsive adjustments */
 @media (max-width: 768px) {
     header {
