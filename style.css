@@ -354,8 +354,51 @@ section {
 }
 
 /* Contact Section */
-/* Add styles for the form and map here */
+.contact-form form {
+    max-width: 600px;
+ margin: 2rem auto;
+ padding: 2rem;
+    background-color: #1a1a1a; /* Warna latar belakang form */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
 
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #fff; /* Warna teks label */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+ padding: 0.75rem;
+    margin-bottom: 1.5rem;
+ border: 1px solid #333; /* Warna border input */
+    border-radius: 5px;
+    background-color: #222; /* Warna latar belakang input */
+    color: #fff; /* Warna teks input */
+    font-size: 1rem;
+}
+
+.contact-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #f70606; /* Warna latar belakang tombol */
+ color: #fff;
+    border: none;
+ border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+ transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #B71C1C; /* Warna latar belakang tombol saat hover */
+}
 /* Footer */
 footer {
     background-color: #1a1a1a; /* Abu-abu gelap untuk footer */
