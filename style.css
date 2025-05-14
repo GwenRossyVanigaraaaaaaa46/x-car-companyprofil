@@ -74,25 +74,24 @@ nav a:hover {
     color: #B71C1C;
 }
 
+/* Global: tampilkan menu secara horizontal */
 .nav-links {
-    display: flex;
-    gap: 1.5rem;
-  }
+  display: flex;
+  gap: 1.5rem;
+}
 
+/* Sembunyikan tombol toggle di desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile: tampilkan tombol toggle, sembunyikan menu */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-      }
-    /* Navigasi: ubah jadi hamburger atau stack vertikal */
-    .nav-links {
-      display: flex; /* ganti dengan JS untuk toggle menu */
-    }
-    .menu-toggle {
-      display: block;
-      cursor: pointer;
-    }
-    .nav-links {
-        display: none;
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -101,31 +100,22 @@ nav a:hover {
     background: #000;
     padding: 1rem 0;
     z-index: 100;
-    }
-    .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links li {
-        margin: 0.5rem 0;
-        text-align: center;
-      }
-      .nav-links li a {
-        display: block;
-        padding: 0.5rem 0;
-        color: #fff;
-        font-size: 1rem;
-      }
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  .nav-links li a {
+    display: block;
+    padding: 0.5rem 0;
+    color: #fff;
+    font-size: 1rem;
+  }
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-  }
 
 /* Hero Section */
 .hero {
@@ -252,37 +242,116 @@ section {
 /* Team Section */
 .team-members {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    align-items: stretch;
 }
-
-.team-member {
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 1.5rem 1rem 1rem 1rem;
     text-align: center;
+    transition: transform 0.2s;
 }
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+.member:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(183,28,28,0.25);
+}
+.member img {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
     object-fit: cover;
+    border-radius: 10px;
     margin-bottom: 1rem;
     border: 3px solid #B71C1C;
+    background: #222;
+}
+.member h3 {
+    margin: 0.5rem 0 0.25rem 0;
+    color: #B71C1C;
+    font-size: 1.2rem;
+}
+.member p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    color: #fff;
+}
+@media (max-width: 900px) {
+    .team-members {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+    .member img {
+        max-width: 100%;
+        height: 180px;
+    }
+    .member {
+        padding: 1rem 0.5rem;
+    }
 }
 
 /* Gallery Section */
-/* Add Grid styles for gallery images here */
-.gallery, .sponsors {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .gallery img, .sponsors img {
-    width: 100%;
-    height: auto;
-  }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+.gallery-grid img {
+  width: 100%;
+  max-width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  background: #222;
+  transition: transform 0.2s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
 /* Sponsors Section */
-/* Add styles for sponsor logos (carousel or grid) here */
+.sponsor-logos {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  height: 100px;
+  align-items: center;
+}
+
+.sponsor-logos-track {
+  display: flex;
+  gap: 2rem;
+  animation: slideSponsor 18s linear infinite;
+}
+
+.sponsor-logos img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+@keyframes slideSponsor {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 /* Contact Section */
 /* Add styles for the form and map here */
@@ -325,4 +394,20 @@ footer {
     }
 
     /* Add more responsive adjustments for other sections */
+}
+
+.team-section h2 {
+    text-align: center;
+}
+
+.gallery-section h2 {
+    text-align: center;
+}
+
+.sponsors-section h2 {
+    text-align: center;
+}
+
+.contact-section h2 {
+    text-align: center;
 }
