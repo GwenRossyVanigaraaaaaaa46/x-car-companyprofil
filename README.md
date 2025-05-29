@@ -1,15 +1,75 @@
-in Hello and welcome to the repository for the X-Car Company Profile, a meticulously crafted project utilizing a combination of HTML, CSS, and JavaScript to present a comprehensive overview of our esteemed team and its dedication to the exhilarating world of motorsports.
+# X-Car Company Profile
 
-**Project Description**
+[![Demo](https://img.shields.io/badge/Live%20Demo-View-blue)](https://x-car-companyprofil.vercel.app)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-This project showcases the X-Car Company Profile, highlighting our team and involvement in motorsports through a simple HTML, CSS, and JavaScript application. The application provides information about the company and its racing endeavors, featuring details about the team members and their roles.
+---
 
-**Features**
+## 📖 Table of Contents
 
-- **Team Overview:** Introduces the core members of the X-Car team.
-- **Motorsports Focus:** Explains the company's dedication and participation in motorsports.
-- **Simple and Clean UI:** Presents information in a straightforward and easy-to-navigate interface.
+- [About](#about)  
+- [Demo](#demo)  
+- [Features](#features)  
+- [Tech Stack](#tech-stack)  
+- [Screenshots](#screenshots)  
+- [Getting Started](#getting-started)  
+  - [Prerequisites](#prerequisites)  
+  - [Installation](#installation)  
+  - [Usage](#usage)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Contact](#contact)
 
-**UI Design**
+---
 
-The user interface is designed to be intuitive and visually appealing. It utilizes a clean layout with clear sections for different aspects of the company profile. The design incorporates elements that reflect the excitement of motorsports while maintaining a professional look. Navigation is simple, allowing users to quickly find the information they are interested in.
+## 🔍 About
+
+X-Car Company Profile adalah landing page statis yang dibuat dengan **HTML, CSS, dan JavaScript**.  
+Dirancang untuk memperkenalkan tim balap (sim racing atau motorsport) dengan tampilan profesional dan dinamis.
+
+---
+
+## 🚀 Demo
+
+Live preview:  
+👉 https://x-car-companyprofil.vercel.app
+
+---
+
+## ✨ Features
+
+- **Team Overview**: Profil dan peran anggota inti X-Car.  
+- **Motorsports Focus**: Penjelasan tentang dedikasi dan partisipasi kami di dunia balap.  
+- **Clean & Simple UI**: Antarmuka intuitif dengan struktur yang mudah dinavigasi.  
+- **Responsive**: Tampilan optimal di desktop maupun perangkat mobile.  
+- **Easy Customization**: Cukup ganti teks, gambar, atau warna di file HTML/CSS.
+
+---
+
+## 🛠 Tech Stack
+
+- **HTML5**  
+- **CSS3** (Flexbox & Grid)  
+- **JavaScript** (vanilla, untuk interaktivitas sederhana)
+
+---
+
+## 📸 Screenshots
+
+![Home Section](./assets/screenshots/home.png)  
+![Team Section](./assets/screenshots/team.png)  
+*Tambah beberapa screenshot yang mewakili setiap section*
+
+---
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+Pastikan kamu punya browser modern seperti Chrome, Firefox, atau Edge.
+
+### Installation
+
+1. Clone repository  
+   ```bash
+   git clone https://github.com/username/x-car-company-profile.git
