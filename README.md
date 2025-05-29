@@ -11,7 +11,6 @@
 - [Demo](#demo)  
 - [Features](#features)  
 - [Tech Stack](#tech-stack)  
-- [Screenshots](#screenshots)  
 - [Getting Started](#getting-started)  
   - [Prerequisites](#prerequisites)  
   - [Installation](#installation)  
@@ -54,11 +53,6 @@ Live preview:
 
 ---
 
-## 📸 Screenshots
-
-![Home Section](./assets/screenshots/home.png)  
-![Team Section](./assets/screenshots/team.png)  
-*Tambah beberapa screenshot yang mewakili setiap section*
 
 ---
 
