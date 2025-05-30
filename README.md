@@ -23,8 +23,8 @@
 
 ## 🔍 About
 
-X-Car Company Profile adalah landing page statis yang dibuat dengan **HTML, CSS, dan JavaScript**.  
-Dirancang untuk memperkenalkan tim balap (sim racing atau motorsport) dengan tampilan profesional dan dinamis.
+X-Car Company Profile is a static landing page created with **HTML, CSS and JavaScript**.  
+Designed to introduce a racing team (sim racing or motorsport) with a professional and dynamic look.
 
 ---
 
@@ -37,11 +37,11 @@ Live preview:
 
 ## ✨ Features
 
-- **Team Overview**: Profil dan peran anggota inti X-Car.  
-- **Motorsports Focus**: Penjelasan tentang dedikasi dan partisipasi kami di dunia balap.  
-- **Clean & Simple UI**: Antarmuka intuitif dengan struktur yang mudah dinavigasi.  
-- **Responsive**: Tampilan optimal di desktop maupun perangkat mobile.  
-- **Easy Customization**: Cukup ganti teks, gambar, atau warna di file HTML/CSS.
+- **Team Overview**: Profiles and roles of X-Car core members.  
+- **Motorsports Focus**: An explanation of our dedication and participation in the world of racing.  
+- **Clean & Simple UI**: Intuitive interface with an easy-to-navigate structure.  
+- **Responsive**: Optimised viewing on both desktop and mobile devices.  
+- **Easy Customization**: Simply replace text, images, or colours in the HTML/CSS file.
 
 ---
 
@@ -49,7 +49,7 @@ Live preview:
 
 - **HTML5**  
 - **CSS3** (Flexbox & Grid)  
-- **JavaScript** (vanilla, untuk interaktivitas sederhana)
+- **JavaScript** (vanilla, for simple interactivity)
 
 ---
 
@@ -60,10 +60,17 @@ Live preview:
 
 ### Prerequisites
 
-Pastikan kamu punya browser modern seperti Chrome, Firefox, atau Edge.
+Make sure you have a modern browser like Chrome, Firefox, or Edge.
 
 ### Installation
 
 1. Clone repository  
    ```bash
    git clone https://github.com/username/x-car-company-profile.git
+
+
+
+## 📠 Contact
+- **Gmail: gwenrossivan@gmail.com**
+- **Linkedin: Gwen Rossy Vanigara**
+- **Github: GwenRossyV**
